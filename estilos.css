@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.seccionInicial {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(217, 217, 217);
+  background-image: url(img/fondo.svg);
+  background-size: cover;
+}
+
+.encabezado {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(36, 36, 36, 0.802);
+}
+
+.encabezado__link {
+  color: #f9b233;
+  padding: 1rem;
+  font-size: 3em;
+}
+
+.cuerpo {
+  display: flex;
+  flex: 1;
+  gap: 20rem;
+}
+
+.cuerpo__contenedor {
+  background-color: rgba(36, 36, 36, 0.802);
+  border-radius: 10px;
+  flex-direction: column;
+  margin: 2rem;
+  flex: 1;
+  padding: 1rem;
+  opacity: 50%;
+  transition: 2s;
+  display: flex;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cuerpo__contenedor:hover {
+  opacity: 100%;
+  border-radius: 20px;
+}
+
+.contenedor__img {
+  flex: 2;
+  background-image: url(img/NuestroEquipo.svg);
+  background-size: cover;
+  border-radius: 10px;
+  transition: 3s;
+}
+
+.contenedor__img:hover {
+  background-position: right;
+}
+
+#imgAlter {
+  background-image: url(img/Redaccion.svg);
+}
+
+.contenedor__texto {
+  flex: 1;
+  border-radius: 10px;
+  font-size: 10px;
+  padding: 1em;
+}
+
+.texto__titulo {
+  font-size: 4em;
+  color: #f9b233;
+}
+
+.texto__parrafo {
+  font-size: 2em;
+  color: #f9b233;
+  margin-top: 1.5em;
+}
+
+.ilustracion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#txtPrimero:hover ~ .ilustracion {
+  animation: moverBalanza 7s infinite;
+}
+
+@keyframes moverBalanza {
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}/*# sourceMappingURL=estilos.css.map */
