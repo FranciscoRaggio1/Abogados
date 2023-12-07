@@ -20,6 +20,21 @@
   width: 100%;
   background-color: rgba(36, 36, 36, 0.802);
 }
+@media (max-width: 991.98px) {
+  .encabezado {
+    font-size: 8px;
+  }
+}
+@media (max-width: 767.98px) {
+  .encabezado {
+    font-size: 6px;
+  }
+}
+@media (max-width: 575.98px) {
+  .encabezado {
+    font-size: 5px;
+  }
+}
 
 .encabezado__link {
   color: #f9b233;
@@ -31,6 +46,16 @@
   display: flex;
   flex: 1;
   gap: 20rem;
+}
+@media (max-width: 991.98px) {
+  .cuerpo {
+    gap: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .cuerpo {
+    flex-direction: column;
+  }
 }
 
 .cuerpo__contenedor {
@@ -45,6 +70,11 @@
   display: flex;
   cursor: pointer;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 991.98px) {
+  .cuerpo__contenedor {
+    opacity: 100%;
+  }
 }
 
 .cuerpo__contenedor:hover {
@@ -74,6 +104,21 @@
   font-size: 10px;
   padding: 1em;
 }
+@media (max-width: 991.98px) {
+  .contenedor__texto {
+    font-size: 8px;
+  }
+}
+@media (max-width: 767.98px) {
+  .contenedor__texto {
+    font-size: 6px;
+  }
+}
+@media (max-width: 575.98px) {
+  .contenedor__texto {
+    font-size: 4px;
+  }
+}
 
 .texto__titulo {
   font-size: 4em;
@@ -91,19 +136,67 @@
   top: 0;
   left: 0;
   right: 0;
+  overflow: visible;
   bottom: 0;
   margin: auto;
+  transition: 4s;
+  animation: moverCirculos 7s infinite;
+}
+@media (max-width: 991.98px) {
+  .ilustracion {
+    display: none;
+  }
+}
+
+#circuloA {
+  transition: 2s;
+}
+
+#circuloC {
+  transition: 2s;
 }
 
 #txtPrimero:hover ~ .ilustracion {
-  animation: moverBalanza 7s infinite;
+  animation: moverCirculos 7s forwards, trasladar 2s forwards;
 }
 
-@keyframes moverBalanza {
+#txtSegundo:hover ~ .ilustracion {
+  animation: moverCirculos 7s forwards, trasladarAlter 2s forwards;
+}
+
+@keyframes trasladar {
+  100% {
+    translate: -100%;
+    scale: 0.4;
+  }
+}
+@keyframes trasladarAlter {
+  100% {
+    translate: 80%;
+    scale: 0.4;
+  }
+}
+#txtPrimero:hover ~ .ilustracion #circuloA {
+  opacity: 0;
+}
+
+#txtPrimero:hover ~ .ilustracion #circuloC {
+  opacity: 0;
+}
+
+#txtSegundo:hover ~ .ilustracion #circuloA {
+  opacity: 0;
+}
+
+#txtSegundo:hover ~ .ilustracion #circuloC {
+  opacity: 0;
+}
+
+@keyframes moverCirculos {
   50% {
-    transform: rotateX(90deg);
+    rotate: 360deg;
   }
   100% {
-    transform: rotateX(0);
+    transform: rotateZ(0);
   }
 }/*# sourceMappingURL=estilos.css.map */
