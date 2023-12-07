@@ -6,6 +6,9 @@ $colorFondo: rgb(217, 217, 217);
   margin: 0;
   padding: 0;
 }
+a{
+  text-decoration: none;
+}
 
 .seccionInicial {
   display: flex;
@@ -36,7 +39,20 @@ $colorFondo: rgb(217, 217, 217);
   color: $colorPrimario;
   padding: 1rem;
   font-size: 3em;
+  transition: 2s;
+  
 }
+
+span{
+  border-radius: 10px;
+  transition: 1s;
+}
+span:hover{
+  background-color: rgba(255, 255, 255, 0.075);
+  padding: 6px;
+  
+}
+
 
 .cuerpo {
   display: flex;

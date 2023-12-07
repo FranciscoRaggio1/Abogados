@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .seccionInicial {
   display: flex;
   flex-direction: column;
@@ -40,6 +44,17 @@
   color: #f9b233;
   padding: 1rem;
   font-size: 3em;
+  transition: 2s;
+}
+
+span {
+  border-radius: 10px;
+  transition: 1s;
+}
+
+span:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  padding: 6px;
 }
 
 .cuerpo {
